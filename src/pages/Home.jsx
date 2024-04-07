@@ -1,15 +1,12 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import { Navigate } from 'react-router-dom'
+import SideBar from '../components/SideBar'
 
 const Home = () => {
-  const { user } = useSelector(stete => stete.auth.user)
-  if(user){
-    return (
-      <div>Home</div>
-    )
-  }
-  return <Navigate to='/login'/>
+  return (
+    <div className='bg-black w-full min-h-screen text-white flex gap-1.5 p-1.5'>
+      <SideBar/>
+    </div>
+  )
 }
 
 export default Home
