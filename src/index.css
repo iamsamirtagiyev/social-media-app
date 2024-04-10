@@ -2,8 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    &:has(input[type='radio'][value='light']:checked){
+        color-scheme: light;
+    }
+    &:has(input[type='radio'][value='dark']:checked){
+        color-scheme: dark;
+    }
+    &:has(input[type='radio'][value='system']:checked){
+        color-scheme: light dark;
+    }
+}
+*{
+    transition: all .5s ease;
+}
+
+aside{
+    background: light-dark(#e3e3e3, rgb(39 39 42));
+}
+
+.icon{
+    color: light-dark(#000, #fff);
+}
+.link{
+    color: light-dark(#000, #fff);
+}
+
+.link:hover{
+    background: light-dark(rgba(0, 0, 0, .1), rgba(255, 255, 255, .1));
+}
+
 @layer base{
     .link{
         @apply flex items-center gap-2 rounded-md px-3 py-2 transition-all duration-500 hover:bg-white/5
     }
+    .label{
+        @apply flex items-center gap-2 cursor-pointer hover:bg-white/10 w-full rounded px-2.5 py-1.5 transition-all duration-500 justify-center
+    }
+    .icon{
+        @apply text-2xl
+    }
 }
+
+
+
