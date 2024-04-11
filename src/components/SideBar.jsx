@@ -35,18 +35,12 @@ const SideBar = () => {
             )
           }
         </NavLink>
-        <NavLink to='/notifications' className='link'>
-          {
-            ({isActive}) => (
-              <>
+        <button className='link cursor-pointer hidden sm:flex'>
                 <div className='icon'>
-                  { isActive ? <FaHeart/> : <FaRegHeart/> }
+                  <FaRegHeart/>
                 </div>
-                <span className={classNames('text-lg hidden sm:flex', { 'font-medium': isActive, 'sm:hidden': isOpen })}>Notifications</span>
-              </>
-            )
-          }
-        </NavLink>
+              <span className={classNames('text-lg hidden sm:flex', { 'sm:hidden': isOpen})}>Notifications</span>
+        </button>
         <NavLink to='/messages' className='link'>
           {
             ({isActive}) => (

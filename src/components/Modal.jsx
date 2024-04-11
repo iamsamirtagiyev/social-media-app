@@ -14,7 +14,7 @@ const Modal = ({ name, data }) => {
       }
     }
   return (
-    <div ref={modalRef} onClick={modalClose} className='fixed w-full h-full bg-black/50 flex items-center justify-center top-0 left-0'>
+    <div ref={modalRef} onClick={modalClose} className='z-10 fixed w-full h-full bg-black/50 flex items-center justify-center top-0 left-0'>
         <div className={classNames('bg-zinc-600 rounded p-5 max-w-96 w-[95%] modal')}>
           <currentModal.element/>
         </div>

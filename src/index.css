@@ -3,19 +3,20 @@
 @tailwind utilities;
 
 :root{
-    &:has(input[type='radio'][value='light']:checked){
+    &:has(input[type='radio'][value='light']:checked),
+    &:has([data-theme = "light"]){
         color-scheme: light;
     }
-    &:has(input[type='radio'][value='dark']:checked){
+    &:has(input[type='radio'][value='dark']:checked),
+    &:has([data-theme = "dark"]){
         color-scheme: dark;
     }
-    &:has(input[type='radio'][value='system']:checked){
+    &:has(input[type='radio'][value='system']:checked),
+    &:has([data-theme = "system"]){
         color-scheme: light dark;
     }
 }
-*{
-    transition: all .5s ease;
-}
+
 
 aside{
     background: light-dark(#e3e3e3, rgb(39 39 42));
@@ -24,7 +25,7 @@ aside{
 .icon{
     color: light-dark(#000, #fff);
 }
-.link{
+.link, .body{
     color: light-dark(#000, #fff);
 }
 
@@ -33,6 +34,9 @@ aside{
 }
 
 @layer base{
+    .body{
+        @apply w-full min-h-screen flex gap-1.5 p-2
+    }
     .link{
         @apply flex items-center gap-2 rounded-md px-3 py-2 transition-all duration-500 hover:bg-white/5
     }
