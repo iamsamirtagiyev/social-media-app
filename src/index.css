@@ -25,7 +25,15 @@ aside{
 .icon{
     color: light-dark(#000, #fff);
 }
-.link, .body{
+.link{
+    color: light-dark(#000, #fff);
+}
+.body{
+    background: light-dark(#fff, #000);
+}
+
+.modal{
+    background: light-dark(#e3e3e3, rgb(39, 39, 42));
     color: light-dark(#000, #fff);
 }
 

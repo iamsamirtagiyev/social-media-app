@@ -13,11 +13,19 @@ import { FaInstagram } from "react-icons/fa";
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const dispatch = useDispatch()
+  const clickHandle = e => {
+    if(e.target.classList.contains('messages')){
+      setIsOpen(true)
+    }
+    else{
+      setIsOpen(false)
+    }
+  }
   return (
     <aside className={classNames('rounded  px-2 py-3 flex flex-col gap-5 fixed sm:static sm:translate-x-0 bottom-1.5 left-1/2 w-[98%] -translate-x-1/2 transition-all duration-500 ', {
       'sm:w-64': !isOpen,
       'sm:w-16': isOpen
-    })}>
+    })} onClick={clickHandle}>
       <Link to='/' className={classNames('link text-2xl font-bold hover:bg-transparent px-4 hidden sm:flex', { 'px-3': isOpen })}>
         { isOpen && <FaInstagram size='30' /> }
         { isOpen || 'Instagram' }
@@ -35,25 +43,25 @@ const SideBar = () => {
             )
           }
         </NavLink>
-        <button className='link cursor-pointer hidden sm:flex'>
+        <button className='link cursor-pointer hidden sm:flex' onClick={() => dispatch(openModal({name: 'notifications'}))}>
                 <div className='icon'>
                   <FaRegHeart/>
                 </div>
               <span className={classNames('text-lg hidden sm:flex', { 'sm:hidden': isOpen})}>Notifications</span>
         </button>
-        <NavLink to='/messages' className='link'>
+        <NavLink to='/messages' className='link messages'>
           {
             ({isActive}) => (
               <>
-                <div className='icon'>
-                  { isActive ? <IoChatbubbleEllipses/> : <IoChatbubbleEllipsesOutline/> }
+                <div className='icon messages'>
+                  { isActive ? <IoChatbubbleEllipses /> : <IoChatbubbleEllipsesOutline /> }
                 </div>
-                <span className={classNames('text-lg hidden sm:flex', { 'font-medium': isActive, 'sm:hidden': isOpen })}>Messages</span>
+                <span className={classNames('text-lg hidden sm:flex messages', { 'font-medium': isActive, 'sm:hidden': isOpen })}>Messages</span>
               </>
             )
           }
         </NavLink>
-        <button className='link cursor-pointer' >
+        <button className='link cursor-pointer' onClick={() => dispatch(openModal({name: 'post'}))} >
           <div className='icon'>
             <FaRegFolder/>
           </div>
