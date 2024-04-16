@@ -3,16 +3,21 @@ import { Link, NavLink } from 'react-router-dom'
 import { GoHome, GoHomeFill } from "react-icons/go";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoChatbubbleEllipsesOutline, IoChatbubbleEllipses } from "react-icons/io5";
-import { FaRegFolder, FaRegUser, FaUser } from "react-icons/fa6";
+import { FaRegUser, FaUser } from "react-icons/fa6";
+import { MdOutlineAddAPhoto } from "react-icons/md";
 import { FaRegMoon } from "react-icons/fa";
 import classNames from 'classnames';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../stores/modal'
 import { FaInstagram } from "react-icons/fa";
+import { LuSun } from "react-icons/lu";
+import { TbSunMoon } from "react-icons/tb";
 
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const dispatch = useDispatch()
+  const { theme } = useSelector(state => state.theme)
+
   const clickHandle = e => {
     if(e.target.classList.contains('messages')){
       setIsOpen(true)
@@ -43,11 +48,17 @@ const SideBar = () => {
             )
           }
         </NavLink>
-        <button className='link cursor-pointer hidden sm:flex' onClick={() => dispatch(openModal({name: 'notifications'}))}>
+        <button className='link cursor-pointer' onClick={() => dispatch(openModal({name: 'notifications'}))}>
                 <div className='icon'>
                   <FaRegHeart/>
                 </div>
               <span className={classNames('text-lg hidden sm:flex', { 'sm:hidden': isOpen})}>Notifications</span>
+        </button>
+        <button className='link cursor-pointer' onClick={() => dispatch(openModal({name: 'post'}))} >
+          <div className='icon'>
+            <MdOutlineAddAPhoto/>
+          </div>
+          <span className={classNames('text-lg hidden sm:flex', { 'sm:hidden': isOpen})} >Create</span>
         </button>
         <NavLink to='/messages' className='link messages'>
           {
@@ -61,17 +72,14 @@ const SideBar = () => {
             )
           }
         </NavLink>
-        <button className='link cursor-pointer' onClick={() => dispatch(openModal({name: 'post'}))} >
-          <div className='icon'>
-            <FaRegFolder/>
-          </div>
-          <span className={classNames('text-lg hidden sm:flex', { 'sm:hidden': isOpen})} >Create</span>
-        </button>
+        
         <button className='link cursor-pointer hidden sm:flex' onClick={() => dispatch(openModal({name: 'theme'}))}>
                 <div className='icon'>
-                  <FaRegMoon/>
+                  { theme === 'dark' && <FaRegMoon/> }
+                  { theme === 'light' && <LuSun/> }
+                  { theme === 'system' && <TbSunMoon/> }
                 </div>
-              <span className={classNames('text-lg hidden sm:flex', { 'sm:hidden': isOpen})}>Dark</span>
+              <span className={classNames('text-lg hidden sm:flex capitalize', { 'sm:hidden': isOpen})}>{ theme }</span>
         </button>
         <NavLink to='/profile' className='link'>
           {

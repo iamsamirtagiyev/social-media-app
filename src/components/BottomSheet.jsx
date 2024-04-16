@@ -29,8 +29,8 @@ const BottomSheet = ({children}) => {
         onDragEnd={() => {
             if(y.get() >= 100) handleClose()
         }}
-        className='absolute bottom-0  w-full overflow-hidden rounded-t-3xl bg-zinc-900 left-0'>
-            <div className='absolute left-0 right-0 top-0 z-10 flex justify-center items-center bg-zinc-900 p-4'>
+        className='absolute bottom-0  w-full overflow-hidden rounded-t-3xl theme left-0'>
+            <div className='absolute left-0 right-0 top-0 z-10 flex justify-center items-center theme p-4'>
                 <button onPointerDown={e => controls.start(e)} className='h-2 w-14 cursor-grap touch-none rounded-full bg-zinc-600 active:cursor-grabbing'></button>
             </div>
             <div className='overflow-y-auto h-full p-4 pt-12'>

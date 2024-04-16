@@ -32,9 +32,24 @@ aside{
     background: light-dark(#fff, #000);
 }
 
-.modal{
+
+
+.modal, .theme, .nav{
     background: light-dark(#e3e3e3, rgb(39, 39, 42));
     color: light-dark(#000, #fff);
+}
+
+label.theme{
+    background: light-dark(rgb(184, 184, 184) , rgb(82 82 91));
+}
+
+.input{
+    background: light-dark(rgb(184, 184, 184) , rgb(82 82 91));
+    color: light-dark(#000, #fff);
+}
+
+.post-icon{
+    color: light-dark(rgb(94, 94, 94), rgb(161 161 170));
 }
 
 .link:hover{

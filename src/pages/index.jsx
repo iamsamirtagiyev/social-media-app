@@ -1,12 +1,9 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import Modal from '../components/Modal'
 import NavBar from '../components/NavBar'
 
 const Home = () => {
-  const { theme } = useSelector(state => state.theme)
   return (
-    <div data-theme={theme}className='w-full' >
+    <div className='w-full sm:w-auto'>
       <NavBar/>
     </div>
   )
