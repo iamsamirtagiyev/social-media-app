@@ -27,8 +27,8 @@ const SideBar = () => {
     }
   }
   return (
-    <aside className={classNames('rounded  px-2 py-3 flex flex-col gap-5 fixed sm:static sm:translate-x-0 bottom-1.5 left-1/2 w-[98%] -translate-x-1/2 transition-all duration-500 ', {
-      'sm:w-64': !isOpen,
+    <aside className={classNames('rounded px-2 py-3 flex flex-col gap-5 fixed sm:sticky sm:top-0 sm:left-0 sm:h-[98vh] sm:translate-x-0 bottom-1.5 left-1/2 w-[97%] -translate-x-1/2 transition-all duration-500 z-10', {
+      'sm:w-80': !isOpen,
       'sm:w-16': isOpen
     })} onClick={clickHandle}>
       <Link to='/' className={classNames('link text-2xl font-bold hover:bg-transparent px-4 hidden sm:flex', { 'px-3': isOpen })}>

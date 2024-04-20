@@ -18,18 +18,19 @@
 }
 
 
-aside{
+aside, .post{
     background: light-dark(#e3e3e3, rgb(39 39 42));
+    color: light-dark(#000, #fff);
 }
 
-.icon{
+.icon, .text{
     color: light-dark(#000, #fff);
 }
 .link{
     color: light-dark(#000, #fff);
 }
 .body{
-    background: light-dark(#fff, #000);
+    background: light-dark(#fff, #000000);
 }
 
 
