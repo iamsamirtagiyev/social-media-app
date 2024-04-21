@@ -1,16 +1,16 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import SideBar from "../components/SideBar"
+import SideBar from "../../components/SideBar"
 import { useSelector } from 'react-redux'
-import Modal from '../components/Modal'
+import Modal from '../../components/Modal'
 
 const MainLayout = () => {
     const { open, data } = useSelector(state => state.modal)
   return (
-    <div className='body'>
+    <div className='body overflow-hidden h-[97vh]'>
         {open && <Modal name={open} data={data}/>}
         <SideBar/>
-        <Outlet/>
+        <Outlet/> 
     </div>
   )
 }

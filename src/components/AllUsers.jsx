@@ -1,9 +1,12 @@
 import React from 'react'
+import Search from './Search'
+import UserList from './UserList'
 
 const AllUsers = () => {
   return (
-    <div className='bg-zinc-800 rounded w-[35%] p-2 hidden sm:flex  '>
-      AllUsers
+    <div className='rounded  py-[3px] hidden sm:flex flex-col gap-1.5'>
+      <Search/>
+      <UserList/>
     </div>
   )
 }

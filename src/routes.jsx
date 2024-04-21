@@ -1,9 +1,9 @@
-import Home from "./pages/index";
+import Home from "./pages/layout/index";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Messages from "./pages/Messages";
-import Profile from "./pages/Profile"
-import MainLayout from "./pages/MainLayout";
+import Messages from "./pages/layout/Messages";
+import Profile from "./pages/layout/Profile"
+import MainLayout from "./pages/layout/MainLayout";
 
 export const routes = [
     {
