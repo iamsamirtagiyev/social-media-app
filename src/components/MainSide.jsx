@@ -3,7 +3,7 @@ import PostList from './PostList'
 
 const MainSide = () => {
   return (
-    <main className='rounded p-0.5 w-full'>
+    <main className='rounded sm:p-0.5 w-full'>
       <PostList/>
     </main>
   )

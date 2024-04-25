@@ -22,12 +22,14 @@
 }
 
 
-aside, .post, .search{
+aside, .post, .search, .search-bg, .user-list{
     background: light-dark(#e3e3e3, rgb(39 39 42));
     color: light-dark(#000, #fff);
 }
+
+
 .user{
-    background: light-dark(#b8b8b8, rgb(63 63 70));
+    background: light-dark(#cfcfcf, rgb(63 63 70));
     color: light-dark(#000, #fff); 
 }
 
@@ -72,7 +74,7 @@ label.theme{
 
 @layer base{
     .body{
-        @apply w-full min-h-screen flex gap-1.5 p-2
+        @apply w-full min-h-screen flex gap-1.5 sm:p-2
     }
     .link{
         @apply flex items-center gap-2 rounded-md px-3 py-2 transition-all duration-500 hover:bg-white/5

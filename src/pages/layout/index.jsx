@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <div className='w-full'>
       <NavBar/>
-      <div className='flex gap-1.5 w-full h-full rounded sm:m-0 mt-1'>
-        <div className='sm:w-[65%] w-full h-full overflow-auto rounded'>
+      <div className='flex gap-1.5 w-full h-full sm:rounded sm:m-0 mt-0.5 sm:mt-1'>
+        <div className='sm:w-[65%] w-full h-full overflow-auto sm:rounded'>
           <MainSide/>
         </div>
         <div className='sm:w-[35%] hidden sm:block w-full h-full rounded'>

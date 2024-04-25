@@ -15,7 +15,7 @@ const Post = () => {
         }, 1000)
     }
   return (
-    <div className='rounded post flex flex-col gap-5 p-2'>
+    <div className='sm:rounded post flex flex-col gap-5 p-2'>
         <div className='flex items-center gap-2 cursor-pointer'>
             <img className='w-12 h-12 object-cover object-center rounded-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE3AGqeSbb44XK0v5V9dtjVdmYJqUysvdVVjxmZ_gmCA&s"  alt="" />
             <span className="font-medium text-lg">lorengray</span>

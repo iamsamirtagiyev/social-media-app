@@ -23,7 +23,7 @@ const NavBar = () => {
       }
     }
   return (
-    <div className='sm:hidden relative w-full nav p-3 flex rounded items-center justify-between'>
+    <div className='sm:hidden relative w-full nav p-3 flex items-center justify-between'>
         <Link className='text-xl font-bold' to='/'>Instagram</Link>
         <div className='flex items-center gap-1.5'>
           <div className='icon-bg flex items-center rounded w-full px-2 py-1'>

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 const Profile = () => {
   const { theme } = useSelector(state => state.theme)
   return (
-    <div data-theme={ theme }>Profile</div>
+    <div data-theme={ theme } className='w-full'>Profile</div>
   )
 }
 
