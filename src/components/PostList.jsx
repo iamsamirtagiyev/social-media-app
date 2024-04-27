@@ -3,7 +3,7 @@ import Post from './Post'
 
 const PostList = () => {
   return (
-    <div className='flex flex-col gap-2 w-full h-[97vh] overflow-auto'>
+    <div className='flex flex-col sm:gap-2 gap-[1px] w-full h-[97vh] overflow-auto'>
         <Post/>
         <Post/>
         <Post/>

@@ -24,7 +24,7 @@ const NavBar = () => {
     }
   return (
     <div className='sm:hidden relative w-full nav p-3 flex items-center justify-between'>
-        <Link className='text-xl font-bold' to='/'>Instagram</Link>
+        <Link className='text-xl font-bold mr-1' to='/'>Instagram</Link>
         <div className='flex items-center gap-1.5'>
           <div className='icon-bg flex items-center rounded w-full px-2 py-1'>
               <input onChange={showUsers} ref={inputRef} type="text" className='bg-transparent border-0 outline-0 text-lg font-medium w-0 focus:w-full' placeholder='Search...' />
@@ -40,7 +40,7 @@ const NavBar = () => {
               </div>
             </button>
         </div>
-        <div ref={searchRef} className="fixed left-1/2 -translate-x-1/2 top-[78px] w-[96%] h-[86%] search z-10 rounded overflow-auto p-2 flex-col gap-1.5 hidden">
+        <div ref={searchRef} className="fixed left-1/2 -translate-x-1/2 top-[65px] w-full h-[86%] search z-10 rounded overflow-auto p-2 flex-col gap-1.5 hidden">
           <User/>
           <User/>
           <User/>
