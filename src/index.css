@@ -36,7 +36,7 @@ aside, .post, .search, .search-bg, .user-list{
 .icon, .text{
     color: light-dark(#000, #fff);
 }
-.link{
+.link, .btn{
     color: light-dark(#000, #fff);
 }
 .body{
@@ -50,7 +50,7 @@ aside, .post, .search, .search-bg, .user-list{
 
 
 
-.modal, .theme, .nav{
+.modal, .theme, .nav, .profile{
     background: light-dark(#e3e3e3, rgb(39, 39, 42));
     color: light-dark(#000, #fff);
 }
@@ -86,7 +86,7 @@ label.theme{
         @apply text-2xl
     }
     .button{
-        @apply rounded px-4 py-2 flex items-center gap-2 text-lg font-medium transition-all duration-500 w-full justify-center sm:w-auto
+        @apply rounded px-4 py-2 flex items-center gap-2 sm:text-lg font-medium transition-all duration-500 w-full justify-center sm:w-auto text-nowrap
     }
 }
 
