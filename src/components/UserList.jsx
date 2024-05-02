@@ -3,7 +3,7 @@ import User from './User'
 
 const UserList = () => {
   return (
-    <div className = 'user-list rounded p-2 flex flex-col gap-1.5 overflow-auto h-[89vh]'>
+    <div className = 'user-list p-2 flex flex-col gap-0.5 overflow-auto h-screen'>
         <User/>
         <User/>
         <User/>

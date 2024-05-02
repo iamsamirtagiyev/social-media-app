@@ -7,10 +7,14 @@ import Modal from '../../components/Modal'
 const MainLayout = () => {
     const { open, data } = useSelector(state => state.modal)
   return (
-    <div className='body overflow-hidden h-[97vh]'>
+    <div className='body overflow-hidden p-0 h-screen flex flex-col sm:flex-row'>
         {open && <Modal name={open} data={data}/>}
-        <SideBar/>
-        <Outlet/> 
+        <div className='overflow-hidden h-full w-full sm:order-2'>
+          <Outlet/>
+        </div>
+        <div className='sticky bottom-0 flex items-end'>
+          <SideBar/>
+        </div>
     </div>
   )
 }

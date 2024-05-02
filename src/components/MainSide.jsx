@@ -3,7 +3,7 @@ import PostList from './PostList'
 
 const MainSide = () => {
   return (
-    <main className='rounded sm:p-0.5 w-full'>
+    <main className='w-full h-screen overflow-auto'>
       <PostList/>
     </main>
   )

@@ -22,8 +22,12 @@
 }
 
 
-aside, .post, .search, .search-bg, .user-list{
+aside, .post, .search, .user-list{
     background: light-dark(#e3e3e3, rgb(39 39 42));
+    color: light-dark(#000, #fff);
+}
+.search-bg{
+    background: light-dark(#e3e3e3, rgb(54, 54, 54));
     color: light-dark(#000, #fff);
 }
 
@@ -74,7 +78,7 @@ label.theme{
 
 @layer base{
     .body{
-        @apply w-full min-h-screen flex gap-1.5 sm:p-2
+        @apply w-full min-h-screen flex gap-0.5 sm:p-2
     }
     .link{
         @apply flex items-center gap-2 rounded-md px-3 py-2 transition-all duration-500 hover:bg-white/5
