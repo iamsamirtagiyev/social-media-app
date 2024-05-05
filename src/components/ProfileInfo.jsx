@@ -9,7 +9,7 @@ const ProfileInfo = () => {
         <div className='border-indigo-500 border-2 rounded-full p-1 sm:w-64 sm:h-64 w-24 h-24'>
             <img className='w-full h-full object-cover rounded-full' src="https://image.cnbcfm.com/api/v1/image/105232079-2018-Chevrolet-Camaro-ZL1-033.jpg?v=1679502991&w=1920&h=1080" alt="profile" />
         </div>
-        <div className='flex items-center sm:hidden gap-3 m-auto sm:m-0'>
+        <div className='flex items-center justify-between sm:hidden gap-3 m-auto sm:m-0 w-[70%]'>
           <button className='flex flex-col items-center'>Post <span className='font-medium'>10</span></button>
           <button className='flex flex-col items-center'>Followers <span className='font-medium'>1000</span></button>
           <button className='flex flex-col items-center'>Following <span className='font-medium'>1000</span></button>

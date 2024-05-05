@@ -5,15 +5,13 @@ import AllUsers from "../../components/AllUsers";
 
 const Home = () => {
   return (
-    <div className="w-full">
-      <NavBar />
-      <div className="flex w-full h-full">
-        <div className="sm:w-[65%] w-full overflow-auto h-full">
-          <MainSide />
-        </div>
-        <div className="sm:w-[35%] hidden sm:block w-full h-full rounded">
-          <AllUsers />
-        </div>
+    <div className="w-full flex gap-[1px]">
+      <div className="w-full sm:w-[65%]">
+        <NavBar/>
+        <MainSide/>
+      </div>
+      <div className="sm:w-[35%] hidden sm:inline-block">
+        <AllUsers/>
       </div>
     </div>
   );

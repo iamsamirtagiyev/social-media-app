@@ -9,10 +9,10 @@ const MainLayout = () => {
   return (
     <div className='body overflow-hidden p-0 h-screen flex flex-col sm:flex-row'>
         {open && <Modal name={open} data={data}/>}
-        <div className='overflow-hidden h-full w-full sm:order-2'>
+        <div className='sm:order-2  w-full'>
           <Outlet/>
         </div>
-        <div className='sticky bottom-0 flex items-end'>
+        <div>
           <SideBar/>
         </div>
     </div>

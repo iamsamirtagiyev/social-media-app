@@ -15,7 +15,7 @@ const Post = () => {
         }, 1000)
     }
   return (
-    <div className='post flex flex-col gap-5 p-2'>
+    <div className='theme-bg flex flex-col gap-5 p-2'>
         <div className='flex items-center gap-2 cursor-pointer'>
             <img className='w-12 h-12 object-cover object-center rounded-full' src="https://w0.peakpx.com/wallpaper/444/903/HD-wallpaper-chevy-camaro-zl1-car-red-thumbnail.jpg"  alt="" />
             <span className="font-medium text-lg">username</span>

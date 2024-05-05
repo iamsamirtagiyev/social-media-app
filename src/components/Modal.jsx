@@ -16,7 +16,7 @@ const Modal = ({ name, data }) => {
     }
   return (
     <div ref={modalRef} onClick={modalClose} className='z-20 fixed w-full h-full flex items-center justify-center top-0 left-0 px-2 backdrop-blur-xl'>
-      <div className={classNames('hidden sm:block bg-zinc-600 rounded-lg p-5 w-full max-w-[500px] overflow-auto modal')}>
+      <div className={classNames('hidden sm:block bg-zinc-600 rounded-lg p-5 w-full max-w-[500px] overflow-auto modal max-h-[80%]')}>
           <currentModal.element/>
         </div>
 

@@ -27,7 +27,7 @@ const SideBar = () => {
     }
   }
   return (
-    <aside className={classNames('px-2 py-3 flex flex-col gap-5  w-full  transition-all duration-500 z-10 h-full', {
+    <aside className={classNames('theme-bg px-2 py-3 flex flex-col gap-5  w-full  transition-all duration-500 z-10 h-full', {
       'sm:w-64': !isOpen,
       'sm:w-16': isOpen
     })} onClick={clickHandle}>

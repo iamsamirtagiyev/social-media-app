@@ -33,7 +33,7 @@ const BottomSheet = ({children}) => {
             <div className='absolute left-0 right-0 top-0 z-10 flex justify-center items-center theme p-4'>
                 <button onPointerDown={e => controls.start(e)} className='h-2 w-14 cursor-grap touch-none rounded-full bg-zinc-600 active:cursor-grabbing'></button>
             </div>
-            <div className='overflow-y-auto h-full p-4 pt-12'>
+            <div className='overflow-y-auto max-h-screen p-4 pt-12'>
                 {children}
             </div>
         </motion.div>

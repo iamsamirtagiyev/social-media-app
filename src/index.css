@@ -44,7 +44,7 @@ aside, .post, .search, .user-list{
     color: light-dark(#000, #fff);
 }
 .body{
-    background: light-dark(#fff, #000000);
+    background: light-dark(#000, #444444);
 }
 
 .icon-bg{
@@ -76,9 +76,14 @@ label.theme{
     background: light-dark(rgba(0, 0, 0, .1), rgba(255, 255, 255, .1));
 }
 
+.theme-bg{
+    color: light-dark(#000, #fff);
+    background: light-dark(#fff, #000);
+}
+
 @layer base{
     .body{
-        @apply w-full min-h-screen flex gap-0.5 sm:p-2
+        @apply w-full min-h-screen flex gap-[1px] sm:p-2
     }
     .link{
         @apply flex items-center gap-2 rounded-md px-3 py-2 transition-all duration-500 hover:bg-white/5

@@ -6,7 +6,7 @@ import MyPostList from '../../components/MyPostList'
 const Profile = () => {
   const { theme } = useSelector(state => state.theme)
   return (
-    <div data-theme={ theme } className='w-full profile rounded sm:p-2 h-full overflow-auto'>
+    <div data-theme={ theme } className='w-full theme-bg rounded sm:p-2 h-full overflow-auto'>
       <ProfileInfo/> 
       <MyPostList/>
     </div>

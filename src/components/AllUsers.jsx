@@ -4,7 +4,7 @@ import UserList from './UserList'
 
 const AllUsers = () => {
   return (
-    <div className='user-list py-[3px] hidden sm:flex flex-col gap-0.5'>
+    <div className='theme-bg pt-2 items-center hidden sm:flex flex-col gap-0.5'>
       <Search/>
       <UserList/>
     </div>
