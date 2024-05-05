@@ -54,10 +54,10 @@ aside, .post, .search, .user-list{
 
 
 
-.modal, .theme, .nav, .profile{
+/* .modal, .theme, .nav, .profile{
     background: light-dark(#e3e3e3, rgb(39, 39, 42));
     color: light-dark(#000, #fff);
-}
+} */
 
 label.theme{
     background: light-dark(rgb(184, 184, 184) , rgb(82 82 91));

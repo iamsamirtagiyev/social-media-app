@@ -6,7 +6,7 @@ import AllUsers from "../../components/AllUsers";
 const Home = () => {
   return (
     <div className="w-full flex gap-[1px]">
-      <div className="w-full sm:w-[65%]">
+      <div className="w-full sm:w-[65%] overflow-auto h-[90vh]">
         <NavBar/>
         <MainSide/>
       </div>

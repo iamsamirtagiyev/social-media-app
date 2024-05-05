@@ -12,7 +12,7 @@ const Messages = () => {
   const { theme } = useSelector(state => state.theme)
   return (
     <div data-theme={ theme } className='flex w-full gap-[1px]'>
-      <div className='sm:w-[30%] h-screen overflow-hidden w-full flex flex-col items-center theme-bg pt-1'>
+      <div className='sm:w-[30%] h-[89vh] overflow-hidden w-full flex flex-col items-center theme-bg pt-1'>
         <Search/>
         <div className='flex flex-col mt-[1px] gap-[1px] overflow-auto h-full w-full'>
           <ChatUser setOpen={setOpen}/>

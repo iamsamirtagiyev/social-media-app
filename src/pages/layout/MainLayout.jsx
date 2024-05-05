@@ -7,9 +7,9 @@ import Modal from '../../components/Modal'
 const MainLayout = () => {
     const { open, data } = useSelector(state => state.modal)
   return (
-    <div className='body overflow-hidden p-0 h-screen flex flex-col sm:flex-row'>
+    <div className='overflow-hidden p-0 h-screen flex flex-col sm:flex-row'>
         {open && <Modal name={open} data={data}/>}
-        <div className='sm:order-2  w-full'>
+        <div className='sm:order-2 w-full h-full'>
           <Outlet/>
         </div>
         <div>

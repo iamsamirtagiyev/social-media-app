@@ -3,7 +3,7 @@ import Post from './Post'
 
 const PostList = () => {
   return (
-    <div className='flex flex-col w-full overflow-auto h-screen'>
+    <div className='flex flex-col w-full'>
         <Post/>
         <Post/>
         <Post/>
